@@ -55,10 +55,10 @@ namespace _01_TomA_Rekensom
             // Stap 7: Toon de tekst in de juiste vorm
             Console.WriteLine($"U gaf het getal {_eersteGetal.ToString()}en getal {_tweedeGetal.ToString()}  in.");
             Console.WriteLine($"De som hiervan is {_som.ToString()}");
-            Console.WriteLine($"Dit getal werd vermeerder met 5.Dit gaf als uitkomst {_vermeerdering.ToString()}." +
-                $"/nDaarna werd er vermenigvuldig met 10.Dit gaf als uitkomst {_vermenigvuldiging.ToString()}");
+            Console.WriteLine($"Dit getal werd vermeerder met 5.Dit gaf als uitkomst {_vermeerderd.ToString()}." +
+                $"\nDaarna werd er vermenigvuldig met 10.Dit gaf als uitkomst {_vermenigvuldigd.ToString()}");
             Console.WriteLine($"Als laatste werd er gedeeld door 2.");
-            Console.WriteLine($"Het uiteindelijke resultaat is {_deling.ToString()}.");
+            Console.WriteLine($"Het uiteindelijke resultaat is {_gedeeld.ToString()}.");
 
 
         }
