@@ -17,6 +17,7 @@ namespace _04_TomA_Keuzemenu
             // Velden
             Boolean _herhalen = true;
             byte _keuze = 0;
+
             // Programma
             do
             {
@@ -33,12 +34,21 @@ namespace _04_TomA_Keuzemenu
                     // Vang invoer op en zet om naar Byte
                     _keuze = Convert.ToByte(Console.ReadLine());
 
+                    // scherm leegmaken
+                    Console.Clear();
+
                     if (_keuze == 1) 
-                    { 
-                        
+                    {
+                        // Groet de gebruiker
+                        Console.WriteLine("\nHallo, gebruiker!");
+
+                        Console.WriteLine("\nDruk op een toets om terug te keren naar het hoofdmenu.");
+                        Console.ReadKey();
+
                     }
                     else if (_keuze == 2) 
                     { 
+                        // stopt de lus
                         _herhalen = false; 
                     }
                     else
@@ -51,6 +61,10 @@ namespace _04_TomA_Keuzemenu
                 }
                 catch
                 {
+                    // scherm leegmaken
+                    Console.Clear();
+
+                    // Foutmelding bij ongeldige keuze
                     Console.WriteLine("Foutieve invoer, probeer opnieuw.");
                     Console.WriteLine("\nDruk op een toets om terug te keren naar het hoofdmenu.");
                     Console.ReadKey();
