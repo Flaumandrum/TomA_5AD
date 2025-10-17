@@ -32,21 +32,35 @@ namespace _08_TomA_Dobbel
                 Console.WriteLine("Kies een optie uit onderstaand menu:");
                 Console.WriteLine("   1. Gooi dobbelsteen");
                 Console.WriteLine("   2. Afsluiten");
-
-                // Stap 3: Vraag keuze + opslaan 
-                Console.Write("\n\nUw keuze: ");
                 try
                 {
+                    // Stap 3: Vraag keuze + opslaan 
+                    Console.Write("\n\nUw keuze: ");
+                    _keuze = Byte.Parse(Console.ReadLine());
+
+                    // Scherm wissen
+                    Console.Clear();
+
                     // Stap 4: 
                     //	Als(gooi)
+                    if( _keuze == 1)
+                    {
+                        //        Bepaal willekeurig getal van 1 t.e.m 6
 
-                    //        Bepaal willekeurig getal van 1 t.e.m 6
+                        //        Toon getal
 
-                    //        Toon getal
+
+                    }
 
                     //    Als(Afsluiten)
+                    else if (_keuze == 2)
+                    {
+                        //        Toon afsluittekst
+                    }
+                    else
+                    {
 
-                    //        Toon afsluittekst
+                    }
                 }
                 catch
                 {
