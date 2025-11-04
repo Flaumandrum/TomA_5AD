@@ -46,9 +46,12 @@ namespace _08_TomA_Dobbel
                     if( _keuze == 1)
                     {
                         //        Bepaal willekeurig getal van 1 t.e.m 6
+                        _dobbelsteen = (byte)_random.Next(1, 7);
 
                         //        Toon getal
-
+                        Console.WriteLine($"U gooide : {_dobbelsteen.ToString()}");
+                        Console.WriteLine("\nDruk op een toets om terug te keren naar het menu.");
+                        Console.ReadKey();
 
                     }
 
@@ -56,10 +59,16 @@ namespace _08_TomA_Dobbel
                     else if (_keuze == 2)
                     {
                         //        Toon afsluittekst
+                        Console.WriteLine("Bedankt voor het gebruiken van de dobbelsteensymulator. Tot ziens!");
+                        Console.WriteLine("\nDruk op een toets om af te sluiten.");
+                        Console.ReadKey();
                     }
                     else
                     {
-
+                        // Foutmelding
+                        Console.WriteLine("Fout: geen geldige keuze.");
+                        Console.WriteLine("Druk op een toets om terug te keren naar het menu.");
+                        Console.ReadKey();
                     }
                 }
                 catch
