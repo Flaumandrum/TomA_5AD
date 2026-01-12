@@ -13,12 +13,32 @@ namespace _15_TomA_ManueleArray
             // Tom Adriaens
             // 12/01/2026
             // Manuele array
-            
-            // Velden 
 
+            // Velden
+            String[] _namen =new String[]{ "Jan", "Piet", "Joris", "Corneel" };
 
             // Programma
+            for(int i = 0; i < _namen.Count(); i++)
+            {
+                if(i < (_namen.Count() - 2))
+                {
+                    Console.Write($"{_namen[i]}, ");
+                }
+                else if(i < (_namen.Count() - 1))
+                {
+                    Console.Write($"{_namen[i]} en ");
+                }
+                else
+                {
+                    Console.Write($"{_namen[i]}. Die hebben baarden ");
+                }
 
+                
+            }
+            Console.WriteLine("die hebben baarden!");
+
+            Console.WriteLine("\nDruk op enter om af te sluiten");
+            Console.ReadKey();
         }
     }
 }
