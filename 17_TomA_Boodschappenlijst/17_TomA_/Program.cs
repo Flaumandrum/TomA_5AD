@@ -4,13 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _17
+namespace _17_TomA_Boodschappenlijst
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-
         }
     }
 }
