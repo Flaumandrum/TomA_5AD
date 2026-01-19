@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
+using System.Runtime.CompilerServices;
 using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
@@ -44,32 +45,99 @@ namespace _17_TomA_Boodschappenlijst
                     //	Als keuze 1: Toevoegen
                     if (_keuze == 1)
                     {
-                        //        Stap 4: overloop de array en zoek de eerste lege plaats + opslaan
+                        int index = -1;
 
-                        //        Stap 5: kijk of er een lege plaats is gevonden
-                        //            Als ja:
-                        //            Vraag de naam van het product +opslaan in vrije plaats van array           Als nee:
-                        //				Toon foutcode
+                        // Stap 4: overloop de array en zoek de eerste lege plaats + opslaan
+                        for(int i = 0; i < _boodschappenlijst.Count(); i++)
+                        {
+                            if (_boodschappenlijst[i] == null)
+                            {
+                                index = i;
+                                break;
+                            }
+                        }
+                        // Stap 5: kijk of er een lege plaats is gevonden
+                        if(index != -1)
+                        {
+                            // Als ja:
+                            // Vraag de naam van het product +opslaan in vrije plaats van array           Als nee:
+                            Console.Write("Geef de naam van het nieuwe product: ");
+                            String naam = Console.ReadLine().ToLower();
+
+                            _boodschappenlijst[index] = naam;
+
+                            // Scherm leegmaken
+                            Console.Clear();
+
+                            // Gebruiker begeleiden
+                            Console.WriteLine("Dit item werd toegevoegd.");
+                            Console.WriteLine("\nDruk op enter om naar het hoofdmenu te gaan.");
+                            Console.ReadKey();
+                        }
+                        else
+                        {
+                            // Scherm leegmaken 
+                            Console.Clear();
+
+                            // Toon foutcode
+                            Console.WriteLine("Er is geen lege plaats meer beschikbaar.");
+                            Console.WriteLine("\nDruk op enter om naar het hoofdmenu te gaan.");
+                            Console.ReadKey();
+                        }
+
 
                     }
 
                     //    Als keuze 2: 
                     else if(_keuze == 2)
                     {
-                        _boodschappenlijst[30] = "appels";
+                        
+                        int index = -1;
+
 
                         // Stap 6: Vraag de naam van het product dat hij wilt veranderen +opslaan
-                        Console.Write("Geef de naam van het product dat u wilt veranderen:");
-                        String product = Console.ReadLine();
-                        //        Stap 7: Overloop de array en zoek de index van het product
-
+                        Console.Write("Geef de naam van het product dat u wilt veranderen: ");
+                        String product = Console.ReadLine().ToLower();
+                        // Stap 7: Overloop de array en zoek de index van het product
+                        for(int i = 0; i < _boodschappenlijst.Count();i++)
+                        {
+                            if (_boodschappenlijst[i] == product)
+                            {
+                                index = i;
+                                break;
+                            }
+                        }
                         //        Stap 8: 
                         // Als het product is gevonden
-                        //                Vraag de naam van het product + opslaan op de juiste plaats
+                        if( index != -1)
+                        {
 
-                        //            Als het product niet wordt gevonden
+                            // Vraag de naam van het product + opslaan op de juiste plaats
+                            Console.Write("Geef de naam van het nieuwe product: ");
+                            String naam = Console.ReadLine().ToLower();
 
-                        //                Toon foutcode
+                            _boodschappenlijst[index] = naam;
+
+                            // Scherm leegmaken
+                            Console.Clear();
+
+                            // Gebruiker begeleiden
+                            Console.WriteLine("Dit item werd aangepast.");
+                            Console.WriteLine("\nDruk op enter om naar het hoofdmenu te gaan.");
+                            Console.ReadKey();
+                        }
+                        //  Als het product niet wordt gevonden
+                        else
+                        {
+                            // Scherm leegmaken 
+                            Console.Clear();
+
+                            // Toon foutcode
+                            Console.WriteLine("Dit item werd niet gevonden.");
+                            Console.WriteLine("\nDruk op enter om naar het hoofdmenu te gaan.");
+                            Console.ReadKey();
+                        }
+
                     }
 
 
@@ -84,12 +152,12 @@ namespace _17_TomA_Boodschappenlijst
                         {
                             if (_boodschappenlijst[i] != null)
                             {
-                                Console.WriteLine($"{i+1}:{_boodschappenlijst[i]}");
+                                Console.WriteLine($"{(i+1).ToString()}:{_boodschappenlijst[i]}");
                             }
                         }
 
                         //  Stap 10: Vraag het nummer van het product dat hij wil verwijderen
-                        Console.Write("Geef het nummer van het product dat u wilt verwijderen: ");
+                        Console.Write("\nGeef het nummer van het product dat u wilt verwijderen: ");
                         _nummer = (Byte)(Byte.Parse(Console.ReadLine())-1);
 
                         //  Stap 11 : verwijder het product
@@ -110,7 +178,7 @@ namespace _17_TomA_Boodschappenlijst
                     {
                        
                         //		Stap 12: Toon de array
-                        Console.WriteLine("Hier zijn uw boodschappen:");
+                        Console.WriteLine("Hier zijn uw boodschappen:\n");
                         foreach(String s in _boodschappenlijst)
                         {
                             if(s != null)
