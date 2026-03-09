@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Remoting;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -14,6 +15,7 @@ namespace _22_TomA_Brandveiligheid
 
         // Velden 
         static Byte _keuze = 0;
+        static String[] _namen = new string[15];
 
         // GUI
         static void Main(string[] args)
@@ -40,16 +42,17 @@ namespace _22_TomA_Brandveiligheid
                     // Als 1: Inschrijven 
                     if (_keuze == 1)
                     {
-                        // Vraag volledige naam + opslaan
-                        Console.Write("Geef uw volledige naam: ");
-                        string naam = Console.ReadLine();
-
                         // zoek legeplaats + opslaan
                         int plaats = ZoekLegePlaats();
 
                         // Als legeplaats gevonden 
                         if(plaats != -1)
                         {
+
+                            // Vraag volledige naam + opslaan
+                            Console.Write("Geef uw volledige naam: ");
+                            string naam = Console.ReadLine();
+
                             // Voeg naam toe
                             Opslaan(plaats, naam);
 
@@ -144,12 +147,18 @@ namespace _22_TomA_Brandveiligheid
                     // Als 5: Afsluiten 
                     else if (_keuze == 5)
                     {
-
+                        // afsluittekst 
+                        Console.WriteLine("Tot de volgende keer.");
+                        Console.WriteLine("Druk op een toets om af te sluiten.");
+                        Console.ReadKey();
                     }
                     // In elk ander geval
                     else
                     {
-
+                        // foutmelding 
+                        Console.WriteLine("U gaf geen geldige keuze in.");
+                        Console.WriteLine("Druk op een toets om terug te keren naar het hoofdmenu.");
+                        Console.ReadKey();
                     }
                 }
                 catch
@@ -174,31 +183,73 @@ namespace _22_TomA_Brandveiligheid
         /// <returns></returns>
         static int ZoekLegePlaats()
         {
+            // maak een controle variabele aan
             int antwoord = -1;
+
+            // Overloop de array
+            for(int i = 0; i< _namen.Count();i++)
+            {
+                // vergelijk of de plaats leeg is
+                if (_namen[i] == null)
+                {
+                    // Als de plaats leeg is, sla de nummer (index) van de plaats
+                    // op in de controle variabele
+                    antwoord = i;
+
+                    // Als je een lege plaats hebt gevonden mag de lus stoppen
+                    break;
+                }
+            }
 
             return antwoord;
         }
 
         static void Opslaan(int index, String naam)
         {
-
+            // neem in de array de lege plaats die werd gevonden 
+            // sla er de naam in op
+            _namen[index] = naam;
         }
 
         static int ZoekInArray(String naam)
         {
+            // maak een controle variabele aan
             int antwoord = -1;
+
+            // Overloop de array
+            for (int i = 0; i < _namen.Count(); i++)
+            {
+                // vergelijk of de plaats leeg is
+                if (_namen[i] == naam)
+                {
+                    // Als de plaats leeg is, sla de nummer (index) van de plaats
+                    // op in de controle variabele
+                    antwoord = i;
+
+                    // Als je een lege plaats hebt gevonden mag de lus stoppen
+                    break;
+                }
+            }
 
             return antwoord;
         }
 
         static void Verwijder(int index)
         {
-
+            // neem in de array de plaats waar de naam werd gevonden 
+            // sla er niets in op 
+            _namen[index] = null;
         }
 
         static String GeefNamenDoor()
         {
             string antwoord = "";
+
+            for(int i = 0; i < _namen.Count(); i ++)
+            {
+                //antwoord += _namen[i]+"\n";
+                antwoord += _namen[i]+Environment.NewLine;
+            }
 
             return antwoord;
         }
