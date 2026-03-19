@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("99_itsMeMario")]
+[assembly: AssemblyTitle("24_TomA_FormsStart")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("HP")]
-[assembly: AssemblyProduct("99_itsMeMario")]
+[assembly: AssemblyProduct("24_TomA_FormsStart")]
 [assembly: AssemblyCopyright("Copyright © HP 2026")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("8178f3a1-2dd1-43c3-b5ff-562d4afd4e96")]
+[assembly: Guid("e16ad33b-0923-44f0-8653-a20f02032fe9")]
 
 // Version information for an assembly consists of the following four values:
 //

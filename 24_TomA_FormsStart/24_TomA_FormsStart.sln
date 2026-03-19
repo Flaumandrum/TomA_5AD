@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.14.36705.20 d17.14
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "99_itsMeMario", "99_itsMeMario\99_itsMeMario.csproj", "{8178F3A1-2DD1-43C3-B5FF-562D4AFD4E96}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "24_TomA_FormsStart", "24_TomA_FormsStart\24_TomA_FormsStart.csproj", "{E16AD33B-0923-44F0-8653-A20F02032FE9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{8178F3A1-2DD1-43C3-B5FF-562D4AFD4E96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8178F3A1-2DD1-43C3-B5FF-562D4AFD4E96}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8178F3A1-2DD1-43C3-B5FF-562D4AFD4E96}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8178F3A1-2DD1-43C3-B5FF-562D4AFD4E96}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E16AD33B-0923-44F0-8653-A20F02032FE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E16AD33B-0923-44F0-8653-A20F02032FE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E16AD33B-0923-44F0-8653-A20F02032FE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E16AD33B-0923-44F0-8653-A20F02032FE9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {78F692B4-538E-4988-A760-9966490F7587}
+		SolutionGuid = {191666CE-84C8-4050-A1C9-89B7CF0F6646}
 	EndGlobalSection
 EndGlobal
