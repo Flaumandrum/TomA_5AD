@@ -16,5 +16,18 @@ namespace _25_TomA_Lln
         {
             InitializeComponent();
         }
+
+        private void btnAnnuleren_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void FrmToonLln_Load(object sender, EventArgs e)
+        {
+            // Zorg dat je de leerlingen toont in de textbox
+            txtToon.Text = Program.ToonLln();
+
+
+        }
     }
 }

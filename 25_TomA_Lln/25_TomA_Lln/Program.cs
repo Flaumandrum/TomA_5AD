@@ -33,8 +33,9 @@ namespace _25_TomA_Lln
         /// <param name="ontvGrootte"></param>
         static public void PasArrayAan(int ontvGrootte)
         {
-
+            _lln = new String[ontvGrootte];
         }
+
         /// <summary>
         /// Zoekt een ontvangen string in de array en geeft de index weer,
         /// geeft -1 als niet gevonden
@@ -44,6 +45,8 @@ namespace _25_TomA_Lln
         static public int ZoekenInArray(String ontvNaam)
         {
             int antwoord = -1;
+
+            antwoord = Array.IndexOf(_lln, ontvNaam);
 
             return antwoord;
 
@@ -57,7 +60,7 @@ namespace _25_TomA_Lln
         /// <param name="ontvNaam"></param>
         static public void OpslaanInArray(int ontvIndex, string ontvNaam)
         {
-
+            _lln[ontvIndex] = ontvNaam;
         }
 
         /// <summary>
@@ -67,6 +70,16 @@ namespace _25_TomA_Lln
         static public String ToonLln()
         {
             String antwoord = null;
+
+            foreach (string s in _lln)
+            {
+                if(s != null)
+                {
+                    antwoord += s + Environment.NewLine;
+                }
+                
+
+            }
 
             return antwoord;
         }

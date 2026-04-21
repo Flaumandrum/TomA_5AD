@@ -42,6 +42,7 @@
             this.btnGrootte.TabIndex = 0;
             this.btnGrootte.Text = "Pas de grootte van de klas aan";
             this.btnGrootte.UseVisualStyleBackColor = true;
+            this.btnGrootte.Click += new System.EventHandler(this.btnGrootte_Click);
             // 
             // btnToev
             // 
@@ -51,6 +52,7 @@
             this.btnToev.TabIndex = 1;
             this.btnToev.Text = "Voeg leerlingen toe";
             this.btnToev.UseVisualStyleBackColor = true;
+            this.btnToev.Click += new System.EventHandler(this.btnToev_Click);
             // 
             // btnToon
             // 
@@ -60,6 +62,7 @@
             this.btnToon.TabIndex = 2;
             this.btnToon.Text = "Toon de leerlingen";
             this.btnToon.UseVisualStyleBackColor = true;
+            this.btnToon.Click += new System.EventHandler(this.btnToon_Click);
             // 
             // btnAfsluiten
             // 
@@ -82,7 +85,7 @@
             this.Controls.Add(this.btnToev);
             this.Controls.Add(this.btnGrootte);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "FrmKeuzemenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Welkom!";
