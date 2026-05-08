@@ -16,5 +16,7 @@ namespace _26_TomA_Proj_Prikklok
         {
             InitializeComponent();
         }
+
+       
     }
 }
