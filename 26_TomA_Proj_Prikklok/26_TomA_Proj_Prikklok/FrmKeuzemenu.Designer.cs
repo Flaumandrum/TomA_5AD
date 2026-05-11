@@ -51,6 +51,7 @@
             this.btnWn.TabIndex = 1;
             this.btnWn.Text = "Registreren werknemer";
             this.btnWn.UseVisualStyleBackColor = true;
+            this.btnWn.Click += new System.EventHandler(this.btnWn_Click);
             // 
             // btnAdm
             // 
@@ -60,6 +61,7 @@
             this.btnAdm.TabIndex = 2;
             this.btnAdm.Text = "Inloggen als Admin";
             this.btnAdm.UseVisualStyleBackColor = true;
+            this.btnAdm.Click += new System.EventHandler(this.btnAdm_Click);
             // 
             // btnAfsluiten
             // 
@@ -69,6 +71,7 @@
             this.btnAfsluiten.TabIndex = 3;
             this.btnAfsluiten.Text = "Afsluiten";
             this.btnAfsluiten.UseVisualStyleBackColor = true;
+            this.btnAfsluiten.Click += new System.EventHandler(this.btnAfsluiten_Click);
             // 
             // FrmKeuzemenu
             // 

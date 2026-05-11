@@ -46,16 +46,79 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BewerkenWn\FrmAanpassenWn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BewerkenWn\FrmAanpassenWn.Designer.cs">
+      <DependentUpon>FrmAanpassenWn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BewerkenWn\FrmTonen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BewerkenWn\FrmTonen.Designer.cs">
+      <DependentUpon>FrmTonen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmInlogAdm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmInlogAdm.Designer.cs">
+      <DependentUpon>FrmInlogAdm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmKeuzeAdm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmKeuzeAdm.Designer.cs">
+      <DependentUpon>FrmKeuzeAdm.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmKeuzemenu.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmKeuzemenu.Designer.cs">
       <DependentUpon>FrmKeuzemenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmRegWn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRegWn.Designer.cs">
+      <DependentUpon>FrmRegWn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BewerkenWn\FrmToevoegenWn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BewerkenWn\FrmToevoegenWn.Designer.cs">
+      <DependentUpon>FrmToevoegenWn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BewerkenWn\FrmVerwijderenWn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BewerkenWn\FrmVerwijderenWn.Designer.cs">
+      <DependentUpon>FrmVerwijderenWn.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="BewerkenWn\FrmAanpassenWn.resx">
+      <DependentUpon>FrmAanpassenWn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BewerkenWn\FrmTonen.resx">
+      <DependentUpon>FrmTonen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmInlogAdm.resx">
+      <DependentUpon>FrmInlogAdm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmKeuzeAdm.resx">
+      <DependentUpon>FrmKeuzeAdm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmKeuzemenu.resx">
       <DependentUpon>FrmKeuzemenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRegWn.resx">
+      <DependentUpon>FrmRegWn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BewerkenWn\FrmToevoegenWn.resx">
+      <DependentUpon>FrmToevoegenWn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BewerkenWn\FrmVerwijderenWn.resx">
+      <DependentUpon>FrmVerwijderenWn.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
