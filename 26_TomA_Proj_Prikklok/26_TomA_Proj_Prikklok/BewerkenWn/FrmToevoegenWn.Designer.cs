@@ -76,6 +76,7 @@
             this.btnTerug.TabIndex = 9;
             this.btnTerug.Text = "Annuleren";
             this.btnTerug.UseVisualStyleBackColor = true;
+            this.btnTerug.Click += new System.EventHandler(this.btnTerug_Click);
             // 
             // btnToev
             // 
@@ -85,6 +86,7 @@
             this.btnToev.TabIndex = 8;
             this.btnToev.Text = "Toevoegen";
             this.btnToev.UseVisualStyleBackColor = true;
+            this.btnToev.Click += new System.EventHandler(this.btnToev_Click);
             // 
             // FrmToevoegenWn
             // 
@@ -99,7 +101,7 @@
             this.Controls.Add(this.lblAn);
             this.Controls.Add(this.lblVn);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "FrmToevoegenWn";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Voeg een werknemer toe";

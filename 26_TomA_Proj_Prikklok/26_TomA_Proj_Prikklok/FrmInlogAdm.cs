@@ -22,7 +22,37 @@ namespace _26_TomA_Proj_Prikklok
             // kijk of alles werd ingevuld
             if(txtWw.Text != "")
             {
+                // sla de invoer op in een variabele 
+                String ww = txtWw.Text;
 
+                // Stuur naar de functie om te checken of het wachtwoord juist is 
+                bool ontvAntw = Program.CheckWw(ww);
+
+                // als het wachtwoord juist is
+                if(ontvAntw)
+                {
+                    // gebruik doorsturen naar keuzemenu admin
+                    FrmKeuzeAdm nieuweFrm = new FrmKeuzeAdm();
+
+                    // deze form hiden 
+                    Hide();
+
+                    // nieuwe form tonen 
+                    nieuweFrm.ShowDialog();
+
+                    // deze form tonen 
+                    Show();
+
+                }
+                // Als het wachtwoord fout is
+                else
+                {
+                    // foutmelding 
+                    MessageBox.Show("Dit wachtwoord is fout!", "Fout!");
+                }
+
+                // reset form
+                txtWw.Clear();
             }
             else
             {
