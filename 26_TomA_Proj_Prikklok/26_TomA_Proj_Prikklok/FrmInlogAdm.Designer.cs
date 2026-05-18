@@ -42,6 +42,7 @@
             this.btnTerug.TabIndex = 7;
             this.btnTerug.Text = "Annuleren";
             this.btnTerug.UseVisualStyleBackColor = true;
+            this.btnTerug.Click += new System.EventHandler(this.btnTerug_Click);
             // 
             // btnInlog
             // 
@@ -51,6 +52,7 @@
             this.btnInlog.TabIndex = 6;
             this.btnInlog.Text = "Inloggen";
             this.btnInlog.UseVisualStyleBackColor = true;
+            this.btnInlog.Click += new System.EventHandler(this.btnInlog_Click);
             // 
             // txtWw
             // 
@@ -79,7 +81,7 @@
             this.Controls.Add(this.txtWw);
             this.Controls.Add(this.lblWw);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "FrmInlogAdm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inloggen admin";
