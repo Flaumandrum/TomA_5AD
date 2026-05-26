@@ -42,6 +42,7 @@
             this.btnTerug.TabIndex = 25;
             this.btnTerug.Text = "Annuleren";
             this.btnTerug.UseVisualStyleBackColor = true;
+            this.btnTerug.Click += new System.EventHandler(this.btnTerug_Click);
             // 
             // cmbKies
             // 
@@ -50,6 +51,7 @@
             this.cmbKies.Name = "cmbKies";
             this.cmbKies.Size = new System.Drawing.Size(208, 32);
             this.cmbKies.TabIndex = 23;
+            this.cmbKies.SelectedIndexChanged += new System.EventHandler(this.cmbKies_SelectedIndexChanged);
             // 
             // lblKies
             // 
@@ -79,10 +81,11 @@
             this.Controls.Add(this.cmbKies);
             this.Controls.Add(this.lblKies);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "FrmTonen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Opzoeken code ";
+            this.Load += new System.EventHandler(this.FrmTonen_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

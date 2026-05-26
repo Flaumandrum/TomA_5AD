@@ -59,6 +59,7 @@
             this.btnTerug.TabIndex = 21;
             this.btnTerug.Text = "Annuleren";
             this.btnTerug.UseVisualStyleBackColor = true;
+            this.btnTerug.Click += new System.EventHandler(this.btnTerug_Click);
             // 
             // btnVerw
             // 
@@ -68,6 +69,7 @@
             this.btnVerw.TabIndex = 20;
             this.btnVerw.Text = "Verwijderen";
             this.btnVerw.UseVisualStyleBackColor = true;
+            this.btnVerw.Click += new System.EventHandler(this.btnVerw_Click);
             // 
             // FrmVerwijderenWn
             // 
@@ -80,10 +82,11 @@
             this.Controls.Add(this.cmbKies);
             this.Controls.Add(this.lblKies);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "FrmVerwijderenWn";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Verwijderen werknemer";
+            this.Load += new System.EventHandler(this.FrmVerwijderenWn_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

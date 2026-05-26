@@ -27,24 +27,73 @@ namespace _26_TomA_Proj_Prikklok
         static List<DateTime> _vertrektijden = new List<DateTime>();
 
         // Functies
-
+        /// <summary>
+        ///  Kijkt of de code van de werknemer bestaat 
+        /// </summary>
+        /// <param name="ontvCode"></param>
+        /// <returns>true als de code bestaat, anders false</returns>
         static public bool CheckCode(int ontvCode)
         {
             bool antwoord = false;
 
+            antwoord = _wnsGetallen.Contains(ontvCode);
+
             return antwoord;
         }
 
+        /// <summary>
+        /// Ontvangt de code, kijkt of er een starttijd is of niet
+        /// indien niet wordt de starttijd aangemaakt 
+        /// indien wel wordt de stoptijd aangemaakt
+        /// </summary>
+        /// <param name="ontvCode"></param>
+
         static public void RegistreerTijd(int ontvCode)
         {
+            int indexCode = _wnsGetallen.IndexOf(ontvCode);
 
+            if (_aankomsttijden[indexCode] == DateTime.MinValue)
+            {
+                _aankomsttijden[indexCode] = DateTime.Now;
+
+            }
+            else if (_aankomsttijden[indexCode].Day == DateTime.Now.Day)
+            {
+                _vertrektijden[indexCode] = DateTime.Now;
+            }
+            else
+            {
+                _aankomsttijden[indexCode] = DateTime.Now;
+                _vertrektijden[indexCode] = DateTime.MinValue;
+            }
         }
-
+        /// <summary>
+        /// Bekijkt het verschil tussen aankomst en vertrek en
+        /// geeft het aantal gewerkte uren mee.
+        /// </summary>
+        /// <param name="ontvCode"></param>
+        /// <returns></returns>
         static public String ToonWerktijd(int ontvCode)
         {
             string antwoord = "";
 
-            return antwoord;
+            int indexCode = _wnsGetallen.IndexOf(ontvCode);
+
+            if (_vertrektijden[indexCode] == DateTime.MinValue)
+            {
+                antwoord = "Welkom!\nEen prettige dag gewenst.";
+            }
+            else
+            {
+                TimeSpan gewerkt = _vertrektijden[indexCode] - _aankomsttijden[indexCode];
+
+                string aantalGewerkt = $"{gewerkt.Hours.ToString()}:{gewerkt.Minutes.ToString()};";
+                 
+
+                antwoord = $"Tot ziens!\nU werkte : {aantalGewerkt}";
+            }
+
+                return antwoord;
         }
         /// <summary>
         /// Kijkt of het wachtwoord juist is
@@ -135,26 +184,58 @@ namespace _26_TomA_Proj_Prikklok
             return antwoord;
         }
 
-        static public void Aanpassen (int ontvIndex, String ontvVn, String OntvAn)
+        /// <summary>
+        /// Ontvangt een index, een voornaam en een achternaam en 
+        /// past de gegevens in de lijsten aan naar de nieuwe
+        /// </summary>
+        /// <param name="ontvIndex"></param>
+        /// <param name="ontvVn"></param>
+        /// <param name="OntvAn"></param>
+        static public void Aanpassen (int ontvIndex, String ontvVn, String ontvAn)
         {
-
+            _voornamen[ontvIndex] = ontvVn;
+            _achternamen[ontvIndex] = ontvAn;
         }
-
+        /// <summary>
+        /// Ontvangt een index van een werknemer en verwijderd de 
+        /// gegevens uit de lijsten
+        /// </summary>
+        /// <param name="ontvIndex"></param>
         static public void Verwijderen (int ontvIndex)
         {
-
+            _voornamen.RemoveAt(ontvIndex);
+            _achternamen.RemoveAt(ontvIndex);
+            _wnsGetallen.RemoveAt(ontvIndex);
+            _vertrektijden.RemoveAt(ontvIndex);
+            _aankomsttijden.RemoveAt(ontvIndex);
         }
 
+        /// <summary>
+        /// ontvangt een index en stuurt de volledige naam en de code door
+        /// </summary>
+        /// <param name="ontvIndex"></param>
+        /// <returns></returns>
         static public String ToonCode (int ontvIndex)
         {
             String antwoord = "";
 
+            antwoord = $"{_voornamen[ontvIndex]} {_achternamen[ontvIndex]} code: {_wnsGetallen[ontvIndex]}";
+
             return antwoord;
         }
 
+        /// <summary>
+        /// geeft een lijst weer met de volledige namen van alle werknemers
+        /// </summary>
+        /// <returns></returns>
         static public List<string> StuurLijstDoor()
         {
             List<string> antwoord = new List<string>();
+
+            for (int i = 0; i < _voornamen.Count(); i++)
+            {
+                antwoord.Add($"{_voornamen[i]} {_achternamen[i]}");
+            }
 
             return antwoord;
         }

@@ -46,6 +46,7 @@
             this.btnTerug.TabIndex = 15;
             this.btnTerug.Text = "Annuleren";
             this.btnTerug.UseVisualStyleBackColor = true;
+            this.btnTerug.Click += new System.EventHandler(this.btnTerug_Click);
             // 
             // btnAanp
             // 
@@ -55,6 +56,7 @@
             this.btnAanp.TabIndex = 14;
             this.btnAanp.Text = "Aanpassen";
             this.btnAanp.UseVisualStyleBackColor = true;
+            this.btnAanp.Click += new System.EventHandler(this.btnAanp_Click);
             // 
             // txtAn
             // 
@@ -120,10 +122,11 @@
             this.Controls.Add(this.lblAn);
             this.Controls.Add(this.lblVn);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "FrmAanpassenWn";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gegevens werknemer aanpassen";
+            this.Load += new System.EventHandler(this.FrmAanpassenWn_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
