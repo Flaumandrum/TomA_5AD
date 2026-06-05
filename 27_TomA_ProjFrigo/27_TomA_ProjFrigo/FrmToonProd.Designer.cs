@@ -73,10 +73,11 @@
             this.Controls.Add(this.txtToon);
             this.Controls.Add(this.lblToon);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "FrmToonProd";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Producten tonen";
+            this.Load += new System.EventHandler(this.FrmToonProd_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

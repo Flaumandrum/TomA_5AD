@@ -54,6 +54,7 @@
             this.btnToev.TabIndex = 12;
             this.btnToev.Text = "Toevoegen";
             this.btnToev.UseVisualStyleBackColor = true;
+            this.btnToev.Click += new System.EventHandler(this.btnToev_Click);
             // 
             // txtDatum
             // 
@@ -100,7 +101,7 @@
             this.Controls.Add(this.lblDatum);
             this.Controls.Add(this.lblNaam);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "FrmToevoegen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Product toevoegen";

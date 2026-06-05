@@ -22,5 +22,11 @@ namespace _27_TomA_ProjFrigo
             // Form sluiten
             Close();
         }
+
+        private void FrmToonVervProd_Load(object sender, EventArgs e)
+        {
+            // haal de vervallenproducten uit de business en toon ze in de tekstbox
+            txtToon.Text = Program.ToonVervProd();
+        }
     }
 }

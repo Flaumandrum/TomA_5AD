@@ -22,5 +22,11 @@ namespace _27_TomA_ProjFrigo
             // Form sluiten
             Close();
         }
+
+        private void FrmToonProd_Load(object sender, EventArgs e)
+        {
+            // haal de naam van alle producten uit de business en toon ze in de tekstbox
+            txtToon.Text = Program.ToonProd();
+        }
     }
 }

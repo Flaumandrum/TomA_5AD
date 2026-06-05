@@ -95,6 +95,7 @@
             this.btnAanp.TabIndex = 6;
             this.btnAanp.Text = "Aanpassen";
             this.btnAanp.UseVisualStyleBackColor = true;
+            this.btnAanp.Click += new System.EventHandler(this.btnAanp_Click);
             // 
             // btnAnnul
             // 
@@ -125,6 +126,7 @@
             this.Name = "FrmAanpProd";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Product aanpassen";
+            this.Load += new System.EventHandler(this.FrmAanpProd_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

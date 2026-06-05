@@ -52,6 +52,7 @@
             this.btnOpz.TabIndex = 8;
             this.btnOpz.Text = "Opzoeken";
             this.btnOpz.UseVisualStyleBackColor = true;
+            this.btnOpz.Click += new System.EventHandler(this.btnOpz_Click);
             // 
             // txtNaam
             // 
@@ -80,7 +81,7 @@
             this.Controls.Add(this.btnAnnul);
             this.Controls.Add(this.btnOpz);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "FrmOpzProd";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Product opzoeken";
